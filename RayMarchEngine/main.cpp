@@ -137,7 +137,7 @@ int main()
 
 	//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-	GLFWwindow* window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "IDK", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "RayMarch", NULL, NULL);
 
 	glfwSetFramebufferSizeCallback(window, framebuffer_resize_callback);
 	//glfwGetFramebufferSize(window, &framebufferWidth, &framebufferHeight);

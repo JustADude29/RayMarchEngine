@@ -1,8 +1,8 @@
 #version 440 core
 
 in vec3 vs_positiom;
-in vec3 vs_color;
-in vec2 vs_texcoord;
+//in vec3 vs_color;
+//in vec2 vs_texcoord;
 
 uniform vec2 u_resolution;
 
@@ -45,7 +45,7 @@ float sdOctahedron( vec3 p, float s)
 
 
 float map(vec3 p){
-	//p = mod(p, 4.f) - 4.0*0.5;
+	p = mod(p, 4.f) - 4.0*0.5;
 	//sphere
 	float sphereDist = length(p) - 1.0;
 	float sphereID = 1.0;
@@ -55,7 +55,7 @@ float map(vec3 p){
 	//octahedron
 	float octa = sdOctahedron(p, 1);
 	//result
-	float res =  fOpUnionChamfer(sphere, octa, 0.5);
+	float res = sphere;
 	return res;
 }
 
